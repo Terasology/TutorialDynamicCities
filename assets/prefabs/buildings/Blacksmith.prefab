@@ -1,0 +1,15 @@
+{
+    "GenericBuilding" : {
+     "name" : "Marketplace",
+     "templateNames" : ["TutorialDynamicCity:smithyTemplate"],
+     "zone" : "COMMERCIAL",
+     "minSize" : [14, 14],
+     "maxSize" : [17, 17],
+     "isEntity" : true
+    },
+    "MarketSubscriber" : {
+     "production" : {"core:torch" : 10},
+     "productionInterval" : 100
+    }
+}
+
