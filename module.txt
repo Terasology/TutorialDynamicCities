@@ -21,6 +21,10 @@
                                   "minVersion" : "0.2.0-SNAPSHOT"
                               },
                               {
+                                  "id" : "Dialogs",
+                                  "minVersion" : "0.1.0-SNAPSHOT"
+                              },
+                              {
                                   "id" : "Minimap",
                                   "minVersion" : "1.0.0-SNAPSHOT"
                               },
@@ -31,6 +35,10 @@
                               {
                                   "id" : "StructureTemplates",
                                   "minVersion" : "0.1.0-SNAPSHOT"
+                              },
+                              {
+                                  "id" : "LightAndShadowResources",
+                                  "minVersion" : "0.2.0-SNAPSHOT"
                               },
                               {
                                   "id" : "StructuralResources",
