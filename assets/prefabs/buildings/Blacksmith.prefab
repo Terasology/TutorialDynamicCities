@@ -8,7 +8,7 @@
      "isEntity" : true
     },
     "MarketSubscriber" : {
-     "production" : {"core:torch" : 10},
+     "production" : {"core:coal" : 10},
      "productionInterval" : 100
     }
 }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.terasology.TutorialDynamicCities.dialogs.actions;
+package org.terasology.tutorialDynamicCities.dialogs.actions;
 
 import com.google.common.collect.ImmutableMap;
 import org.terasology.persistence.typeHandling.DeserializationContext;
@@ -27,22 +27,22 @@ import org.terasology.persistence.typeHandling.SimpleTypeHandler;
 import java.util.Map;
 
 @RegisterTypeHandler
-public class ShowMarketScreenActionTypeHandler extends SimpleTypeHandler<ShowMarketScreenAction> {
+public class ShowDialogActionTypeHandler extends SimpleTypeHandler<ShowDialogAction> {
 
     @Override
-    public PersistedData serialize(ShowMarketScreenAction action, SerializationContext context) {
+    public PersistedData serialize(ShowDialogAction action, SerializationContext context) {
         Map<String, PersistedData> data = ImmutableMap.of(
                 "type", context.create(action.getClass().getSimpleName()),
-                "market", context.create(action.getMarketID()));
+                "page", context.create(action.getPage()));
 
         return context.create(data);
     }
 
     @Override
-    public ShowMarketScreenAction deserialize(PersistedData data, DeserializationContext context) {
+    public ShowDialogAction deserialize(PersistedData data, DeserializationContext context) {
         PersistedDataMap root = data.getAsValueMap();
-        long marketID = root.get("market").getAsLong();
-        return new ShowMarketScreenAction(marketID);
+        String page = root.get("page").getAsString();
+        return new ShowDialogAction(page);
     }
 
 }

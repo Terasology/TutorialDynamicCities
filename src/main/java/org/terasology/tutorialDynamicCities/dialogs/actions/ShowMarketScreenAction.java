@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.terasology.TutorialDynamicCities.dialogs.actions;
+package org.terasology.tutorialDynamicCities.dialogs.actions;
 
 import org.terasology.dialogs.action.PlayerAction;
-import org.terasology.economy.ui.market.events.MarketScreenRequestEvent;
 import org.terasology.entitySystem.entity.EntityRef;
+import org.terasology.tutorialDynamicCities.market.events.MarketScreenRequestEvent;
 
 /**
  *
@@ -28,12 +28,12 @@ public class ShowMarketScreenAction implements PlayerAction {
     private long marketID;
 
     public ShowMarketScreenAction(long marketID) {
-        this.marketID = this.marketID;
+        this.marketID = marketID;
     }
 
     @Override
     public void execute(EntityRef charEntity, EntityRef talkTo) {
-        charEntity.send(new MarketScreenRequestEvent(marketID));
+        talkTo.send(new MarketScreenRequestEvent(marketID, charEntity));
     }
 
     public long getMarketID() {

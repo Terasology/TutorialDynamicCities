@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.terasology.TutorialDynamicCities.settlement;
+package org.terasology.tutorialDynamicCities.settlement;
 
 
 import org.terasology.dynamicCities.population.CultureComponent;
