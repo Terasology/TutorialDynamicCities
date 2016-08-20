@@ -23,9 +23,12 @@ import org.terasology.dialogs.components.DialogComponent;
 import org.terasology.dialogs.components.DialogPage;
 import org.terasology.dynamicCities.buildings.components.SettlementRefComponent;
 import org.terasology.dynamicCities.construction.events.BuildingEntitySpawnedEvent;
+import org.terasology.dynamicCities.playerTracking.PlayerTracker;
 import org.terasology.dynamicCities.settlements.components.MarketComponent;
 import org.terasology.economy.components.MarketSubscriberComponent;
+import org.terasology.economy.components.MultiInvStorageComponent;
 import org.terasology.economy.events.ResourceInfoRequestEvent;
+import org.terasology.economy.events.ResourceStoreEvent;
 import org.terasology.economy.events.SubscriberRegistrationEvent;
 import org.terasology.economy.systems.MarketLogisticSystem;
 import org.terasology.entitySystem.entity.EntityManager;
@@ -34,6 +37,7 @@ import org.terasology.entitySystem.event.ReceiveEvent;
 import org.terasology.entitySystem.prefab.Prefab;
 import org.terasology.entitySystem.systems.BaseComponentSystem;
 import org.terasology.entitySystem.systems.RegisterSystem;
+import org.terasology.entitySystem.systems.UpdateSubscriberSystem;
 import org.terasology.logic.common.DisplayNameComponent;
 import org.terasology.registry.In;
 import org.terasology.tutorialDynamicCities.market.events.MarketScreenRequestEvent;
@@ -43,7 +47,7 @@ import java.util.List;
 import java.util.Map;
 
 @RegisterSystem
-public class MarketManagementSystem extends BaseComponentSystem {
+public class MarketManagementSystem extends BaseComponentSystem implements UpdateSubscriberSystem {
 
     @In
     private EntityManager entityManager;
@@ -54,7 +58,12 @@ public class MarketManagementSystem extends BaseComponentSystem {
     @In
     private AssetManager assetManager;
 
+    @In
+    private PlayerTracker playerTracker;
+
     private Logger logger = LoggerFactory.getLogger(MarketManagementSystem.class);
+
+    private int counter = 0;
 
     @ReceiveEvent(components = MarketSubscriberComponent.class)
     public void onBuildingEntitySpawned(BuildingEntitySpawnedEvent event, EntityRef entityRef) {
@@ -95,6 +104,27 @@ public class MarketManagementSystem extends BaseComponentSystem {
         }
         DialogPage dialogPage = dialogComponent.getPage("WARES");
         dialogPage.paragraphText = paragraphText;
+    }
 
+    @Override
+    public void update(float delta) {
+        if (counter != 0) {
+            counter --;
+            return;
+        }
+        Iterable<EntityRef> bldgsWithChests = entityManager.getEntitiesWith(MultiInvStorageComponent.class, SettlementRefComponent.class);
+        for (EntityRef bldg : bldgsWithChests) {
+            ResourceInfoRequestEvent requestEvent = new ResourceInfoRequestEvent();
+            bldg.send(requestEvent);
+            SettlementRefComponent settlementRefComponent = bldg.getComponent(SettlementRefComponent.class);
+            if (requestEvent.isHandled && !requestEvent.resources.isEmpty()) {
+                for (String resource : requestEvent.resources.keySet()) {
+                    if (requestEvent.resources.get(resource) != 0) {
+                        bldg.send(new ResourceStoreEvent(resource, requestEvent.resources.get(resource), settlementRefComponent.settlement.getComponent(MarketComponent.class).market));
+                    }
+                }
+            }
+        }
+        counter = 200;
     }
 }

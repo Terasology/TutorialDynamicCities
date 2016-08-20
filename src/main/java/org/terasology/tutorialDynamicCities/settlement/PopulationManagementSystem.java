@@ -22,8 +22,6 @@ import org.terasology.dynamicCities.settlements.components.ActiveSettlementCompo
 import org.terasology.dynamicCities.settlements.components.MarketComponent;
 import org.terasology.dynamicCities.settlements.events.SettlementRegisterEvent;
 import org.terasology.economy.components.InfiniteStorageComponent;
-import org.terasology.economy.components.MarketSubscriberComponent;
-import org.terasology.economy.events.SubscriberRegistrationEvent;
 import org.terasology.entitySystem.entity.EntityManager;
 import org.terasology.entitySystem.entity.EntityRef;
 import org.terasology.entitySystem.event.ReceiveEvent;
@@ -42,18 +40,7 @@ public class PopulationManagementSystem extends BaseComponentSystem {
         PopulationComponent populationComponent = settlement.getComponent(PopulationComponent.class);
         CultureComponent cultureComponent = settlement.getComponent(CultureComponent.class);
         EntityRef market = entityManager.create(new InfiniteStorageComponent(1));
-        MarketSubscriberComponent marketSubscriberComponent = new MarketSubscriberComponent(1);
-        marketSubscriberComponent.consumptionStorage = market;
-        marketSubscriberComponent.productStorage = settlement;
-        marketSubscriberComponent.productionInterval = 500;
-        marketSubscriberComponent.production.put(populationComponent.popResourceType, Math.round(cultureComponent.growthRate));
         MarketComponent marketComponent = new MarketComponent(market);
         settlement.addComponent(marketComponent);
-        settlement.addComponent(marketSubscriberComponent);
-
-        settlement.saveComponent(marketSubscriberComponent);
-        settlement.saveComponent(marketComponent);
-
-        settlement.send(new SubscriberRegistrationEvent());
     }
 }

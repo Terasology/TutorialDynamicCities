@@ -8,8 +8,10 @@
      "isEntity" : true
     },
     "MarketSubscriber" : {
-     "production" : {"core:coal" : 10},
-     "productionInterval" : 100
+     "production" : {"StructuralResources:Barrel" : 2},
+     "productionInterval" : 500,
+     "consumption" : {"Core:plank" : 16},
+     "consumptionInterval" : 100
     }
 }
 
