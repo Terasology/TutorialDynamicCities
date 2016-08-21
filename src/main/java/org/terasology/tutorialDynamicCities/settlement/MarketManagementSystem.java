@@ -114,6 +114,9 @@ public class MarketManagementSystem extends BaseComponentSystem implements Updat
         }
         Iterable<EntityRef> bldgsWithChests = entityManager.getEntitiesWith(MultiInvStorageComponent.class, SettlementRefComponent.class);
         for (EntityRef bldg : bldgsWithChests) {
+            if (!bldg.isActive() || !bldg.exists()) {
+                continue;
+            }
             ResourceInfoRequestEvent requestEvent = new ResourceInfoRequestEvent();
             bldg.send(requestEvent);
             SettlementRefComponent settlementRefComponent = bldg.getComponent(SettlementRefComponent.class);
