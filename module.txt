@@ -1,48 +1,50 @@
 {
     "id" : "TutorialDynamicCity",
     "version" : "0.1.0-SNAPSHOT",
-    "author" : "",
+    "author" : "Cpt Crunchy",
     "displayName" : "TutorialDynamicCity",
-    "description" : "",
-    "dependencies" : [{
-                                  "id" : "Core",
-                                  "minVersion" : "1.0.0"
-                              },
-                              {
-                                  "id" : "CommonWorld",
-                                  "minVersion" : "0.2.2-SNAPSHOT"
-                              },
-                              {
-                                  "id" : "Cities",
-                                  "minVersion" : "0.6.0"
-                              },
-                              {
-                                  "id" : "DynamicCities",
-                                  "minVersion" : "0.2.0-SNAPSHOT"
-                              },
-                              {
-                                  "id" : "Dialogs",
-                                  "minVersion" : "0.1.0-SNAPSHOT"
-                              },
-                              {
-                                  "id" : "Minimap",
-                                  "minVersion" : "1.0.0-SNAPSHOT"
-                              },
-                              {
-                                  "id" : "Economy",
-                                  "minVersion" : "0.1.0-SNAPSHOT"
-                              },
-                              {
-                                  "id" : "StructureTemplates",
-                                  "minVersion" : "0.1.0-SNAPSHOT"
-                              },
-                              {
-                                  "id" : "LightAndShadowResources",
-                                  "minVersion" : "0.2.0-SNAPSHOT"
-                              },
-                              {
-                                  "id" : "StructuralResources",
-                                  "minVersion" : "0.2.1-SNAPSHOT"
-                              }],
+    "description" : "A tutorial module meant to showcase the DynamicCities system with a basic culture",
+    "dependencies" : [
+        {
+            "id" : "Core",
+            "minVersion" : "1.0.0"
+        },
+        {
+            "id" : "CommonWorld",
+            "minVersion" : "0.2.2-SNAPSHOT"
+        },
+        {
+            "id" : "Cities",
+            "minVersion" : "0.6.0"
+        },
+        {
+            "id" : "DynamicCities",
+            "minVersion" : "0.2.0-SNAPSHOT"
+        },
+        {
+            "id" : "Dialogs",
+            "minVersion" : "0.1.0-SNAPSHOT"
+        },
+        {
+            "id" : "Minimap",
+            "minVersion" : "1.0.0-SNAPSHOT"
+        },
+        {
+            "id" : "Economy",
+            "minVersion" : "0.1.0-SNAPSHOT"
+        },
+        {
+            "id" : "StructureTemplates",
+            "minVersion" : "0.1.0-SNAPSHOT"
+        },
+        {
+            "id" : "LightAndShadowResources",
+            "minVersion" : "0.2.0-SNAPSHOT"
+        },
+        {
+            "id" : "StructuralResources",
+            "minVersion" : "0.2.1-SNAPSHOT"
+        }
+    ],
     "serverSideOnly" : false
 }
