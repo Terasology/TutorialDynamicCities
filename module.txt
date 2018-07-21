@@ -1,6 +1,6 @@
 {
     "id" : "TutorialDynamicCity",
-    "version" : "0.1.1-SNAPSHOT",
+    "version" : "0.1.2-SNAPSHOT",
     "author" : "Cpt Crunchy",
     "displayName" : "TutorialDynamicCity",
     "description" : "A tutorial module meant to showcase the DynamicCities system with a basic culture",
@@ -12,7 +12,7 @@
         {"id" : "Dialogs", "minVersion" : "0.1.0"},
         {"id" : "Minimap", "minVersion" : "1.0.0"},
         {"id" : "Economy", "minVersion" : "0.1.0"},
-        {"id" : "StructureTemplates", "minVersion" : "0.2.0"},
+        {"id" : "StructureTemplates", "minVersion" : "0.3.0"},
         {"id" : "LightAndShadowResources", "minVersion" : "0.2.0"},
         {"id" : "StructuralResources", "minVersion" : "1.0.0"}
     ],
