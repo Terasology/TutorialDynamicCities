@@ -22,12 +22,12 @@ import org.terasology.persistence.typeHandling.PersistedData;
 import org.terasology.persistence.typeHandling.PersistedDataMap;
 import org.terasology.persistence.typeHandling.RegisterTypeHandler;
 import org.terasology.persistence.typeHandling.SerializationContext;
-import org.terasology.persistence.typeHandling.SimpleTypeHandler;
+import org.terasology.persistence.typeHandling.TypeHandler;
 
 import java.util.Map;
 
 @RegisterTypeHandler
-public class ShowDialogActionTypeHandler extends SimpleTypeHandler<ShowDialogAction> {
+public class ShowDialogActionTypeHandler implements TypeHandler<ShowDialogAction> {
 
     @Override
     public PersistedData serialize(ShowDialogAction action, SerializationContext context) {
