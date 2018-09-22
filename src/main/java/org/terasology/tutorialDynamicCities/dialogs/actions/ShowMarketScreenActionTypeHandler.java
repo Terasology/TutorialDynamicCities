@@ -22,12 +22,12 @@ import org.terasology.persistence.typeHandling.PersistedData;
 import org.terasology.persistence.typeHandling.PersistedDataMap;
 import org.terasology.persistence.typeHandling.RegisterTypeHandler;
 import org.terasology.persistence.typeHandling.SerializationContext;
-import org.terasology.persistence.typeHandling.TypeHandler;
+import org.terasology.persistence.typeHandling.SimpleTypeHandler;
 
 import java.util.Map;
 
 @RegisterTypeHandler
-public class ShowMarketScreenActionTypeHandler implements TypeHandler<ShowMarketScreenAction> {
+public class ShowMarketScreenActionTypeHandler extends SimpleTypeHandler<ShowMarketScreenAction> {
 
     @Override
     public PersistedData serialize(ShowMarketScreenAction action, SerializationContext context) {
