@@ -1,11 +1,12 @@
 {
     "id" : "TutorialDynamicCity",
-    "version" : "0.1.2-SNAPSHOT",
+    "version" : "0.1.3-SNAPSHOT",
     "author" : "Cpt Crunchy",
     "displayName" : "TutorialDynamicCity",
     "description" : "A tutorial module meant to showcase the DynamicCities system with a basic culture",
     "dependencies" : [
         {"id" : "Core", "minVersion" : "2.0.0"},
+        {"id" : "CoreBlocks", "minVersion" : "1.0.0"},
         {"id" : "CommonWorld", "minVersion" : "0.2.2"},
         {"id" : "Cities", "minVersion" : "0.6.0"},
         {"id" : "DynamicCities", "minVersion" : "0.2.0"},
