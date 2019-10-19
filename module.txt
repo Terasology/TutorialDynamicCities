@@ -15,7 +15,7 @@
         {"id" : "Economy", "minVersion" : "0.1.0"},
         {"id" : "StructureTemplates", "minVersion" : "0.3.0"},
         {"id" : "LightAndShadowResources", "minVersion" : "0.2.0"},
-        {"id" : "StructuralResources", "minVersion" : "1.0.0"}
+        {"id" : "StructuralResources", "minVersion" : "2.0.0"}
     ],
     "serverSideOnly" : false
 }
