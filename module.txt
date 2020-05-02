@@ -1,11 +1,10 @@
 {
     "id" : "TutorialDynamicCity",
-    "version" : "0.1.3-SNAPSHOT",
+    "version" : "0.2.0",
     "author" : "Cpt Crunchy",
     "displayName" : "TutorialDynamicCity",
     "description" : "A tutorial module meant to showcase the DynamicCities system with a basic culture",
     "dependencies" : [
-        {"id" : "Core", "minVersion" : "3.0.0"},
         {"id" : "CoreBlocks", "minVersion" : "1.0.0"},
         {"id" : "CommonWorld", "minVersion" : "0.2.2"},
         {"id" : "Cities", "minVersion" : "1.0.0"},
@@ -17,5 +16,6 @@
         {"id" : "LightAndShadowResources", "minVersion" : "0.2.0"},
         {"id" : "StructuralResources", "minVersion" : "2.0.0"}
     ],
-    "serverSideOnly" : false
+    "serverSideOnly" : false,
+    "isTutorial" : true
 }
