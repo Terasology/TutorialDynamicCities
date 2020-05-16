@@ -1,21 +1,22 @@
 {
-    "id" : "TutorialDynamicCity",
-    "version" : "0.2.0",
-    "author" : "Cpt Crunchy",
-    "displayName" : "TutorialDynamicCity",
-    "description" : "A tutorial module meant to showcase the DynamicCities system with a basic culture",
-    "dependencies" : [
-        {"id" : "CoreBlocks", "minVersion" : "1.0.0"},
-        {"id" : "CommonWorld", "minVersion" : "0.2.2"},
-        {"id" : "Cities", "minVersion" : "1.0.0"},
-        {"id" : "DynamicCities", "minVersion" : "0.2.0"},
-        {"id" : "Dialogs", "minVersion" : "0.1.0"},
-        {"id" : "Minimap", "minVersion" : "1.0.0"},
-        {"id" : "Economy", "minVersion" : "0.1.0"},
-        {"id" : "StructureTemplates", "minVersion" : "0.3.0"},
-        {"id" : "LightAndShadowResources", "minVersion" : "0.2.0"},
-        {"id" : "StructuralResources", "minVersion" : "2.0.0"}
+    "id": "TutorialDynamicCity",
+    "version": "1.0.0",
+    "author": "Cpt Crunchy",
+    "displayName": "TutorialDynamicCity",
+    "description": "A tutorial module meant to showcase the DynamicCities system with a basic culture",
+    "dependencies": [
+        { "id": "CoreAdvancedAssets", "minVersion": "1.1.0" },
+        { "id": "CoreAssets", "minVersion": "2.0.1" },
+        { "id": "CommonWorld", "minVersion": "0.2.2" },
+        { "id": "Cities", "minVersion": "1.0.0" },
+        { "id": "DynamicCities", "minVersion": "0.2.0" },
+        { "id": "Dialogs", "minVersion": "0.1.0" },
+        { "id": "Economy", "minVersion": "0.1.0" },
+        { "id": "LightAndShadowResources", "minVersion": "0.2.0" },
+        { "id": "Minimap", "minVersion": "1.0.0" },
+        { "id": "StructuralResources", "minVersion": "2.0.0" },
+        { "id": "StructureTemplates", "minVersion": "0.3.0" }
     ],
-    "serverSideOnly" : false,
-    "isTutorial" : true
+    "serverSideOnly": false,
+    "isTutorial": true
 }
