@@ -18,7 +18,7 @@ package org.terasology.tutorialDynamicCities.dialogs.actions;
 
 import org.terasology.dialogs.ShowDialogEvent;
 import org.terasology.dialogs.action.PlayerAction;
-import org.terasology.entitySystem.entity.EntityRef;
+import org.terasology.engine.entitySystem.entity.EntityRef;
 
 /**
  *
