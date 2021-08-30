@@ -6,8 +6,8 @@ import org.terasology.engine.entitySystem.entity.EntityRef;
 import org.terasology.engine.logic.players.LocalPlayer;
 import org.terasology.engine.registry.In;
 import org.terasology.engine.rendering.nui.CoreScreenLayer;
+import org.terasology.module.inventory.ui.InventoryGrid;
 import org.terasology.nui.databinding.ReadOnlyBinding;
-import org.terasology.engine.rendering.nui.layers.ingame.inventory.InventoryGrid;
 
 /**
  */

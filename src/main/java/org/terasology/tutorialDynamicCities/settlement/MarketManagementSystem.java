@@ -18,7 +18,6 @@ package org.terasology.tutorialDynamicCities.settlement;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.terasology.assets.management.AssetManager;
 import org.terasology.dialogs.components.DialogComponent;
 import org.terasology.dialogs.components.DialogPage;
 import org.terasology.dynamicCities.buildings.components.SettlementRefComponent;
@@ -40,6 +39,7 @@ import org.terasology.engine.entitySystem.systems.RegisterSystem;
 import org.terasology.engine.entitySystem.systems.UpdateSubscriberSystem;
 import org.terasology.engine.logic.common.DisplayNameComponent;
 import org.terasology.engine.registry.In;
+import org.terasology.gestalt.assets.management.AssetManager;
 import org.terasology.tutorialDynamicCities.market.events.MarketScreenRequestEvent;
 
 import java.util.ArrayList;
